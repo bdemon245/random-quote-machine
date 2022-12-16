@@ -1,13 +1,35 @@
+:root{
+  font-size: 10px;
+
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system,'Secular One', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+button, button::after, button::before, a{
+  border: none;
+  background: none;
+  font-size: 3rem;
+}
+.socials a, .controlls a, button{
+  transition: all 200ms ease-in;
+}
+button:hover{
+  scale: 0.9;
+}
+.controlls a:hover{
+  scale: 0.9;
+}
+
+
