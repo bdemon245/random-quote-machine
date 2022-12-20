@@ -38,9 +38,14 @@ function App(props) {
     fetch('https://quotes15.p.rapidapi.com/quotes/random/', options)
       .then(response => response.json())
       .then(data => {
-        setContent(data.content)
-        setAuthor(data.originator.name)
-        setIsLoading(false)
+        if (data.content.length > 200) {
+          fetchData()
+        } else {
+          setContent(data.content)
+          setAuthor(data.originator.name)
+          setIsLoading(false)
+        }
+
       })
       .catch(err => console.error(err));
   }
@@ -56,11 +61,11 @@ function App(props) {
 
   return (
     <div class="d-flex flex-column align-items-center justfy-content-center p-5" style={{ height: "100vh", width: '100vw', background: color }}>
-      <div className="align-self-end" style={{color: color, textDecoration: 'none'}}>
-        <Socials />
+      <div className="align-self-end" style={{ color: color, textDecoration: 'none' }}>
+        <Socials colorV2={colorV2} />
       </div>
       <Card className='rounded-3 my-auto px-5 py-3' style={{ width: "clamp(28rem, 48rem, 50rem)", minHeight: 150 }} >
-        <Card.Body className='d-flex flex-column'>
+        <Card.Body  id="qoute-box" className='d-flex flex-column'>
           {isLoading === true ? <Loading /> : <Quote isLoading={isLoading} content={content} author={author} color={color} colorV2={colorV2} />}
 
           <Controlls content={content} author={author} color={color} changeTheme={changeTheme} changeQuote={fetchData} />
