@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from 'react'
 import { Card } from 'react-bootstrap';
 import { Loading, Quote, Controlls, Socials } from "./Components";
