@@ -20,15 +20,18 @@ code {
 button, button::after, button::before, a{
   border: none;
   background: none;
-  font-size: 3rem;
+  font-size: 2em;
 }
-.socials a, .controlls a, button{
+.socials a, button{
   transition: all 200ms ease-in;
 }
 button:hover{
   scale: 0.9;
 }
-.controlls a:hover{
+#tweet-quote i{
+  transition: all 200ms ease-in;
+}
+#tweet-quote i:hover{
   scale: 0.9;
 }
 

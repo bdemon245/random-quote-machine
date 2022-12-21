@@ -65,7 +65,7 @@ function App(props) {
       <div className="align-self-end" style={{ color: color, textDecoration: 'none' }}>
         <Socials colorV2={colorV2} />
       </div>
-      <Card className='rounded-3 my-auto px-5 py-3' style={{ width: "clamp(28rem, 48rem, 50rem)", minHeight: 150 }} >
+      <Card className='rounded-3 my-auto px-5 py-3' style={{ maxWidth: '35em', minHeight: 150 }} >
         <Card.Body  id="qoute-box" className='d-flex flex-column'>
           {isLoading === true ? <Loading /> : <Quote isLoading={isLoading} content={content} author={author} color={color} colorV2={colorV2} />}
 

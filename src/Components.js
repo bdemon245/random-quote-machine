@@ -37,10 +37,13 @@ function Controlls(props) {
     const twitterQuery = `https://twitter.com/intent/tweet?text=${props.content + '%0a%20%20%20%20%E2%80%94' + props.author}`
 
     return (
-        <div className='controlls flex-grow-1 flex-basis-1 d-flex gap-3 align-items-end' >
-            <a id="tweet-qoute" style={{ color: props.color }}
-                href={twitterQuery} target='_blank' rel='noreferrer'>
-                {tweetBtn}</a>
+        <div className='controlls flex-grow-1 flex-basis-1 d-flex gap-3 align-items-end justify-content-end' >
+            <div className='flex-grow-1 justify-self-start'>
+                <a id="tweet-quote" style={{ color: props.color }}
+                    href={twitterQuery} target='_blank' rel='noreferrer'>
+                    {tweetBtn}</a>
+            </div>
+
             <button style={{ color: props.color }} onClick={props.changeTheme}>{themeBtn}</button>
             <button id='new-quote' style={{ color: props.color }} className='' onClick={() => {
                 props.changeTheme()
@@ -67,7 +70,7 @@ function Socials(props) {
             <div className='lead'><p style={{ color: 'white' }}>Follow me on</p></div>
             <div className='socials row rounded-3 '>
                 <a className='col' href={socials.github} title={socials.github} target="_blank" rel="noopener noreferrer">{github}</a>
-                <a className='col' href={socials.facebook} title={socials.facebook}target="_blank" rel="noopener noreferrer">{fb}</a>
+                <a className='col' href={socials.facebook} title={socials.facebook} target="_blank" rel="noopener noreferrer">{fb}</a>
                 <a className='col' href={socials.freeCodeCamp} title="Visit my freeCodeCamp profile" target="_blank" rel="noopener noreferrer">{freeCodeCamp}</a>
                 {/* <a className='col' href={socials.twitter} title={socials.twitter} target="_blank" rel="noopener noreferrer">{twitter}</a> */}
             </div>
