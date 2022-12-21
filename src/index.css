@@ -2,6 +2,9 @@
   font-size: 10px;
 
 }
+*{
+  transition: color 250ms ease, background 1000ms ease;
+}
 body {
   margin: 0;
   font-family: -apple-system,'Secular One', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
